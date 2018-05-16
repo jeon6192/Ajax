@@ -1,0 +1,64 @@
+package ex9_13_enum;
+
+import java.io.PrintStream;
+
+final class Season extends Enum
+{
+   
+    private Season(String s, int i, String name)
+    {
+        super(s, i);
+    
+        this.name = name;
+    
+        System.out.println((new StringBuilder("\uC0DD\uC131\uC790  ")).append(name).append(" \uD638\uCD9C").toString());
+  
+    }
+
+    String value()
+    {
+        return name;
+        
+    }
+
+    public static Season[] values()
+    {
+        Season aseason[];
+        int i;
+        Season aseason1[];
+        System.arraycopy(aseason = ENUM$VALUES, 0, aseason1 = new Season[i = aseason.length], 0, i);
+    
+        return aseason1;
+       
+    }
+
+    public static Season valueOf(String s)
+    {
+        return (Season)Enum.valueOf(ex9_13_enum/Season, s);
+    /        
+    }
+
+    public static final Season SPRING;
+    public static final Season SUMMER;
+    public static final Season FALL;
+    public static final Season WINTER;
+    private final String name;
+    private static final Season ENUM$VALUES[];
+
+   
+    static 
+    {
+        SPRING = new Season("SPRING", 0, "\uBD04");
+   
+        SUMMER = new Season("SUMMER", 1, "\uC5EC\uB984");
+    
+        FALL = new Season("FALL", 2, "\uAC00\uC744");
+   
+        WINTER = new Season("WINTER", 3, "\uACA8\uC6B8");
+   
+        ENUM$VALUES = (new Season[] {
+            SPRING, SUMMER, FALL, WINTER
+        });   
+    }
+    
+}

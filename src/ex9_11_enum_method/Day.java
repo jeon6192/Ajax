@@ -1,0 +1,5 @@
+package ex9_11_enum_method;
+
+enum Day {
+	MONDAY, TUESDAY, WENDESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+}
